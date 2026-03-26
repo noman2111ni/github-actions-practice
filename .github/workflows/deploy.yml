@@ -1,0 +1,20 @@
+name: Deploy workflow
+on: [push, workflow_dispatch]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+      #   uses: actions/checkout@v6
+      # - name: node js
+      #   uses: actions/setup-node@v6
+      #   with:
+      #     node-version: 20
+      # - name: print node version
+      #   run: node --version
+        run: |
+          echo "Cloning code"
+          echo "${{toJson(github)}}"
+          git clone https://github.com/${{github.repository}}.git
+ 
