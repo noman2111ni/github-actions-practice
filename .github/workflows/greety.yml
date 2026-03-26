@@ -1,0 +1,11 @@
+name: greety
+on: push
+jobs: 
+  greedy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "greatyuser"
+        run: echo "Hello World"
+    
+
+  
