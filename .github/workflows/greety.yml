@@ -1,11 +1,27 @@
+# name of workflow
 name: greety
-on: push
-jobs: 
-  greedy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: "greatyuser"
-        run: echo "Hello World"
-    
 
-  
+# triggers if push to main branch
+on: push
+
+# list of jobs for workflow
+jobs: 
+  # name of job
+  greedy:
+  # run job on ubuntu
+    runs-on: ubuntu-latest
+    # list of steps for job in order
+    steps:
+    # name of step
+      - name: "greatyuser"
+    # run command for print of hello world
+        run: echo "Hello World"
+
+      - name: "Branch name"
+        run: echo ${{ github.ref }}
+        
+      - name: "actor"
+        run: echo ${{ github.actor }}
+
+      - name: "Repo name"
+        run: echo ${{ github.repository}}
